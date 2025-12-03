@@ -14,6 +14,7 @@ find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Core)
 
 add_executable(Keyword-Static-Demo
   main.cpp
+  CTest.h CTest.cpp
 )
 target_link_libraries(Keyword-Static-Demo PRIVATE Qt${QT_VERSION_MAJOR}::Core)
 
