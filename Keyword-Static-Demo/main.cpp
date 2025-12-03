@@ -1,27 +1,9 @@
 #include <QCoreApplication>
-#include <QLocale>
-#include <QTranslator>
-
-#include <iostream>
-using namespace std;
-
-// #include <
 
 int main(int argc, char *argv[])
 {
     QCoreApplication a(argc, argv);
 
-    QTranslator translator;
-    const QStringList uiLanguages = QLocale::system().uiLanguages();
-    for (const QString &locale : uiLanguages) {
-        const QString baseName = "keword-StaticDemo_" + QLocale(locale).name();
-        if (translator.load(":/i18n/" + baseName)) {
-            a.installTranslator(&translator);
-            break;
-        }
-    }
-
-    cout<<"Runnung"<<endl;
     // Set up code that uses the Qt event loop here.
     // Call a.quit() or a.exit() to quit the application.
     // A not very useful example would be including
