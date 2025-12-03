@@ -1,8 +1,14 @@
 #include <QCoreApplication>
+#include <iostream>
+
+using namespace std;
+
 
 int main(int argc, char *argv[])
 {
     QCoreApplication a(argc, argv);
+
+    cout << "Runnung main..." << endl;
 
     // Set up code that uses the Qt event loop here.
     // Call a.quit() or a.exit() to quit the application.
