@@ -18,8 +18,8 @@ void crateTestObj()
     static int nl = 101;
 
     //just a test instance for now
-    CAppTest test;
-
+    static CAppTest test;
+    cout << "********" << endl;
     cout << "This is static var value: " << g_numb << endl;
     g_numb++;
     cout << "This is static var value afer increment: " << g_numb << endl;
@@ -29,6 +29,11 @@ void crateTestObj()
     cout << "This is static local var value: " << nl << endl;
     nl++;
     cout << "This is static local value afer increment: " << nl << endl;
+
+
+    cout << "This is static object var value: " << test.getTestVal() << endl;
+    test.incrTestVal();
+    cout << "This is static object value afer increment: " << test.getTestVal() << endl;
 }
 
 int main(int argc, char *argv[])

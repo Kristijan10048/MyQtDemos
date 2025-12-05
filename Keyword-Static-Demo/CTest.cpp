@@ -12,3 +12,13 @@ CAppTest::~CAppTest()
 {
     cout << "AppTest Destrucotr!" << endl;
 }
+
+int CAppTest::getTestVal()
+{
+    return m_iTestVal;
+}
+
+void CAppTest::incrTestVal()
+{
+    m_iTestVal++;
+}
