@@ -31,6 +31,22 @@ void multiplyMatrix(const d_matrix& matrixA, const d_matrix& matrixB, d_matrix* 
 
     cout << "Result:" << endl;
     printMatrix(resMatrix,3,3);
+
+    *outMatrix = resMatrix;
+}
+
+
+void dotProduct(d_matrix_row& v1, d_matrix_row& v2, double *dotProduct)
+{
+    //exit if dimensions dont match
+    if (v1.size() != v2.size())
+        return;
+
+    //calculate dot product
+    *dotProduct = 0;
+    for(unsigned int k =0; k < v1.size(); k++)
+        *dotProduct += v1[k] * v2[k];
+
 }
 
 
@@ -84,6 +100,8 @@ int main(int argc, char *argv[])
     printMatrix(m2,3,3);
     multiplyMatrix(m2, m1, &res);
 
+    cout<< "Result:" << endl;
+    printMatrix(res,3,3);
 
     return a.exec();
 }
